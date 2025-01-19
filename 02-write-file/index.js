@@ -19,7 +19,7 @@ const processInput = (input) => {
   } else {
     output.write(`${input}${os.EOL}`, (error) => {
       if (error) {
-        console.log('Error: ', error.message);
+        console.error('Error: ', error.message);
       }
     });
   }
