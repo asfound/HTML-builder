@@ -8,8 +8,7 @@ const displayInfo = async (file) => {
   const stats = await stat(filePath);
 
   const { name, ext } = parse(file.name);
-  const sizeKb = (stats.size / 1024).toFixed(3);
-  console.log(`${name} - ${ext.slice(1)} - ${sizeKb}kb`);
+  console.log(`${name} - ${ext.slice(1)} - ${stats.size}B`);
 };
 
 (async () => {
